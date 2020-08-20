@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
-import Logo from './logo';
-import SearchBar from './search-bar';
-import RecentPosts from './recent-posts'
+import Home from './home';
+import Results from './results';
+
 
 export default class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Logo />
-        <SearchBar />
-        <RecentPosts />
+        <Router>
+          <Switch>
+            <Route exact path='/' component= {Home} />
+            <Route exact path='/results' component= {Results} />
+          </Switch>
+        </Router> 
       </div>
     );
   }
