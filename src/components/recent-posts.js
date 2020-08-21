@@ -5,8 +5,19 @@ import * as actions from '../actions';
 
 class RecentPosts extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.fetchRecentPosts();
+    }
+
+    renderPosts = function () {
+        const posts = this.props.recentPosts.map((post, index) => {
+            if (index < 3) {
+                return (
+                    <li key={post.id}>{post.title}</li>
+                );
+            }
+        })
+        return posts
     }
     render() {
         return (
@@ -14,14 +25,18 @@ class RecentPosts extends Component {
                 <div className='recent-posts-wrapper'>
                     <div className='recent-posts-heading'>Recent Post</div>
                     <ul className='posts'>
-                        <li>recent post0</li>
-                        <li>recent post1</li>
-                        <li>recent post2</li>
+                        {this.renderPosts()}
                     </ul>
-                </div> 
+                </div>
             </div>
         );
     }
 }
 
-export default connect(null, actions)(RecentPosts)
+function mapSatateToProps(state) {
+    return {
+        recentPosts: state.posts.recentPosts
+    }
+}
+
+export default connect(mapSatateToProps, actions)(RecentPosts)
