@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Post from './post';
+
 import * as actions from '../actions';
 
 class RecentPosts extends Component {
@@ -13,7 +15,7 @@ class RecentPosts extends Component {
         const posts = this.props.recentPosts.map((post, index) => {
             if (index < 3) {
                 return (
-                    <li key={post.id}>{post.title}</li>
+                    <Post key={post.id} {...post}/>
                 );
             }
         })
