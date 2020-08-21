@@ -5,7 +5,7 @@ import Logo from './logo'
 export default function () {
     return (
         <div>
-            <Logo />
+            <Logo size={55}/>
             <h1>Some Results</h1>
         </div>
     );
