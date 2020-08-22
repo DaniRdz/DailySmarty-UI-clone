@@ -11,9 +11,7 @@ class SearchBar extends Component {
     }
 
     handleFormSubmit({ query }) {
-        console.log('trying to handlesubmit for query', query);
-
-        this.props.history.push('/results');
+        this.props.onSubmit(query);
     }
 
     renderInput(field) {
