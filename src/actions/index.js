@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {SET_RECENT_POSTS} from './types';
+import {SET_RECENT_POSTS, SET_RESULTS_POSTS} from './types';
 
 export function fetchRecentPosts() {
     return function (dispatch) {
@@ -23,10 +23,10 @@ export function fetchPostsWithQuery(query) {
         axios.get(`https://api.dailysmarty.com/search?q=${query}`)
             .then(response => {
                 console.log('Response', response.data.posts);
-                /* dispatch({
-                    type: SET_RECENT_POSTS,
+                dispatch({
+                    type: SET_RESULTS_POSTS,
                     payload: response.data.posts
-                }) */
+                })
             })
             .catch(error => {
                 console.log('fetchPostsWithQuery error', error);
