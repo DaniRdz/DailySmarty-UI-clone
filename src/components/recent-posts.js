@@ -35,10 +35,10 @@ class RecentPosts extends Component {
     }
 }
 
-function mapSatateToProps(state) {
+function mapStateToProps(state) {
     return {
         recentPosts: state.posts.recentPosts
     }
 }
 
-export default connect(mapSatateToProps, actions)(RecentPosts)
+export default connect(mapStateToProps, actions)(RecentPosts)
