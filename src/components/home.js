@@ -10,17 +10,16 @@ import * as actions from '../actions';
 class Home extends Component {
 
     handleSearchBarFormSubmit(query) {
-        console.log('trying to handlesubmit for query', query);
-
-        this.props.history.push('/results');
-        this.props.fetchPostsWithQuery(query);
+        this.props.fetchPostsWithQuery(query, () => {
+            this.props.history.push('/results');
+        });
     }
 
     render() {
         return (
             <div className='home-wrapper'>
                 <Logo />
-                <SearchBar onSubmit={(query) => {this.handleSearchBarFormSubmit(query)}}/>
+                <SearchBar onSubmit={(query) => { this.handleSearchBarFormSubmit(query) }} />
                 <RecentPosts />
             </div>
         );

@@ -9,7 +9,6 @@ import * as actions from '../actions';
 
 class Results extends Component {
     handleSearchBarFormSubmit(query) {
-        console.log('serch for', query)
         this.props.fetchPostsWithQuery(query)
     }
     render() {
