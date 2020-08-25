@@ -1,0 +1,31 @@
+.search-bar{
+    .search-bar-wrapper{
+        display: grid;
+        grid-column-gap: 23px;
+        width: 100%;
+
+        input {
+            padding-left: 35px;
+            color: $gray-one;
+            box-shadow: 2px 3px 28px 1px rgba(0,0,0,0.1);
+            border: 0px solid transparent;
+            height: 118px;
+            font-size: 40px;
+            border-radius: 5px;
+            &::placeholder{
+                color: $gray-two;
+            }
+    
+            &:focus{
+                outline: none;
+                box-shadow: 2px 3px 28px 1px rgba(0,0,0,0.3) ;
+            }
+        }
+        
+        p{
+            text-align: right;
+            font-size: 14px;
+            color: $gray-two;
+        }
+    }
+}
