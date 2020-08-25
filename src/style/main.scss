@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./home.scss";
 @import "./search-bar.scss";
+@import "./recent-post.scss";
 
 .content-wrapper{
     display: grid;
@@ -14,4 +15,10 @@
 
 .post-topic {
     margin: 0px 4px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
 }
