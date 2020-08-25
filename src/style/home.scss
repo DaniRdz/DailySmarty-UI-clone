@@ -1,7 +1,8 @@
-.home-wrapper {
-    height: 100vh;
-    width: 66vw;
+.content-wrapper{
     display: grid;
-    justify-items: stretch;
-    align-content: space-evenly;
+    justify-content: center;
+
+    .home-wrapper {
+        @include default-page-layout();
+    }
 }

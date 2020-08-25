@@ -1,12 +1,9 @@
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "./home.scss";
 @import "./search-bar.scss";
 @import "./recent-post.scss";
-
-.content-wrapper{
-    display: grid;
-    justify-content: center;
-}
+@import "./results.scss";
 
 .logo-main, .recent-posts {
     display: grid;
