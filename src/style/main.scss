@@ -2,6 +2,16 @@
 @import "./home.scss";
 @import "./search-bar.scss";
 
+.content-wrapper{
+    display: grid;
+    justify-content: center;
+}
+
+.logo-main, .recent-posts {
+    display: grid;
+    justify-content: center;
+}
+
 .post-topic {
     margin: 0px 4px;
 }
