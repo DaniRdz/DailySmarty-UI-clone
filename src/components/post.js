@@ -11,6 +11,26 @@ export default class Post extends Component {
         }
     }
 
+    getNameForPostLink(str){
+        var n = str.lastIndexOf('/');
+        var name = str.substring(n+1, str.length);
+
+        if((n+1) == str.length) {
+            name = str.slice(0, n);
+            n = name.lastIndexOf('/');
+            name = str.substring(n + 1, str.length - 1);
+        }    
+
+        if(name.includes('.html')) {
+            name = name.substring(0, name.length - 5);
+        }
+        if(name.includes('.htm')) {
+            name = name.substring(0, name.length - 4);
+        }
+
+        return name;
+    }
+
     renderTopics() {
         let topics = this.props.associated_topics.map((topic, index) => {
             return (<span className='post-topic' key={index}>{topic}</span>)
@@ -24,7 +44,7 @@ export default class Post extends Component {
                 <div key={index} className='post-link'>
                     <div className='post-link-box'></div>
                     <div className='link'>
-                        <a href={link.link_url}>Useful Link #{index + 1}</a>
+                        <a href={link.link_url}>{this.getNameForPostLink(link.link_url)}</a>
                     </div>
                 </div>
             )
