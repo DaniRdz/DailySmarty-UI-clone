@@ -20,7 +20,7 @@ class Home extends Component {
             <div className='content-wrapper'>
                 <div className='home-wrapper'>
                     <Logo />
-                    <SearchBar onSubmit={(query) => { this.handleSearchBarFormSubmit(query) }} />
+                    <SearchBar page='home' onSubmit={(query) => { this.handleSearchBarFormSubmit(query) }} />
                     <RecentPosts />
                 </div>
             </div>
