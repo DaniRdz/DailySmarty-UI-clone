@@ -1,3 +1,40 @@
 .results{
-    @include default-page-layout();
+    height: 100vh;
+    width: 66vw;
+    display: grid;
+    margin-top: 52px;
+    grid-row-gap: 44px;
+}
+
+.results-posts{
+    .results-posts-wrapper{
+        .posts{
+            display: grid;
+            grid-row-gap: 21px;
+        }
+    }
+}
+
+.result-post{
+    display: grid;
+    align-content:space-around;
+    grid-row-gap: 22px;
+
+    .result-post-topics{
+        color: $blue-one;
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: normal;
+    }
+
+    .result-post-title a {
+        color: $gray-one;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+    }
+
+    /* .result-post-links{
+
+    } */
 }
