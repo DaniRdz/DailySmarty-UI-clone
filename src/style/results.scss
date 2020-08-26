@@ -35,15 +35,15 @@
     }
 
     .result-post-links{
-        width: 100%;
         display: flex;
-        justify-content: space-between;
     }
 }
 
 .post-link{
     display: flex;
     min-height: 70px;
+    flex-flow: 205px;
+    margin-right: 37px;
 
     .post-link-box{
         min-width: 70px;
@@ -56,4 +56,10 @@
         line-height: 17px;
         text-decoration: none;
     }
+}
+
+.no-content{
+    color: $gray-one;
+    font-size: 14px;
+    line-height: 17px;
 }
