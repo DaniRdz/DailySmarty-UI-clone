@@ -34,7 +34,26 @@
         text-decoration: none;
     }
 
-    /* .result-post-links{
+    .result-post-links{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
 
-    } */
+.post-link{
+    display: flex;
+    min-height: 70px;
+
+    .post-link-box{
+        min-width: 70px;
+        background-color: $gray-three;
+        margin-right: 16px;
+    }
+    .link a{
+        color: $gray-one;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: none;
+    }
 }
