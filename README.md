@@ -1,3 +1,3 @@
-# DailySmarty UI clode
+# DailySmarty UI clone
 
-> lets build with react
+>build with React/Redux/Router
